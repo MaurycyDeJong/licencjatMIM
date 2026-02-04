@@ -3,7 +3,7 @@
 
 ## Język deklaratywny: logika pierwszego rzędu ($FO$).
 
-Logika pierwszego rzędu ($FO$) - abstrakcja języka -  składa się z następujących elementów:
+Logiką pierwszego rzędu ($FO$) chcemy zmodelować rozumowanie. Składa się z następujących elementów:
 1. Formuły atomowe:
   * Relacje $R(x_1, x_2,\ldots, x_n)$, np. relacja mniejszości $<(x_1,x_2)$.
   * Równość $x=y$ - atom wyrażający identyczność dwóch obiektów na dziedzinie.
@@ -12,21 +12,17 @@ Logika pierwszego rzędu ($FO$) - abstrakcja języka -  składa się z następuj
 
 ## Język imperatywny: algebra relacji ($RA$).
 
-Algebra relacji ($RA$) - abstrakcja silnika -  składa się z następujących elementów:
+Algebrą relacji ($RA$) chcemy zmodelować jak faktycznie realizujemy zapytania. Składa się z następujących elementów:
 
 ### Wyrażenia atomowe:
-    
+
 $\set{(a_1, a_2,\ldots, a_n)}$ - gdzie $a_i$ stałe oraz $R$ - to "tabele", czyli zbiory krotek
 
 ### Selekcja:
 
-$$
-\sigma _{i=j}(S) = \set{(a_1, a_2, \ldots, a_n) | (a_1, a_2, \ldots, a_n) \in S, a_i=a_j }
-$$
+$\sigma _{i=j}(S) = \set{(a_1, a_2, \ldots, a_n) | (a_1, a_2, \ldots, a_n) \in S, a_i=a_j }$
 
-$$
-\sigma _{i,b}(S) = \set{(a_1, a_2, \ldots, a_n) | (a_1, a_2, \ldots, a_n) \in S, a_i=b }
-$$
+$\sigma _{i,b}(S) = \set{(a_1, a_2, \ldots, a_n) | (a_1, a_2, \ldots, a_n) \in S, a_i=b }$
    
 ### Rzut, permutacja, duplikacja:
 
@@ -46,4 +42,4 @@ $S - T = \set{(a_1,\ldots,a_n)| (a_1,\ldots,a_n) \in S, (a_1,\ldots,a_n) \notin 
 
 ## Równoważność języków pomaga pisać zapytania w SQL-u.
 
-Twierdzenie Codd'a: $\textbf{FO=RA}$ - W logice pierwszego rzędu i w algebrze relacji da się wyrazić te same zapytania.
+**Twierdzenie Codd'a:** $\textbf{FO=RA}$ - logika pierwszego rzędu i algebra relacji są tak samo ekspresywne. W praktyce oznacza to, że za pomocą $FO$ i $RA$ da się wyrazić te same zapytania. Daje nam to sposób, aby móc rozumować $(FO)$ o danych na fizycznym komputerze $(RA)$.

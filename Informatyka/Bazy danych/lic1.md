@@ -1,3 +1,4 @@
+
 # Co to jest baza danych?
 
 ## Modelowanie danych: tabele, drzewa, grafy.
