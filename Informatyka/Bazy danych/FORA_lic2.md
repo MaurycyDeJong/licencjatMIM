@@ -64,6 +64,26 @@ $S - T = \set{(a_1,\ldots,a_n)| (a_1,\ldots,a_n) \in S, (a_1,\ldots,a_n) \notin 
 Tutaj rozwiąże kilka zadań z egzaminu, gdzie należy przedstawić zapytanie za pomocą operacji Algebry Relacji.
 Będę korzystał z działań: $\times$, $\sigma$, $\pi$, $\cup$, $-$.
 
+### Egzamin 2024/2025 Zad.3
+
+#### Treść zadania
+
+Mamy relację $E$ reprezentującą krawędzie grafu skierowanego, przy czym nie bierzemy pod uwagę wierzchołków izolowanych, nulli i duplikatów (tzn. zakładamy, że takich nie ma). Odległość $u$ do $v$ definiujemy jako najkrótszą ścieżkę z $u$ do $v$. Napiszemy wyrażenie algebry relacji wyliczający to $(u,v)$, że ich odległość wynosi $4$.
+
+#### Rozwiązanie
+
+Podejdźmy do tego rekurencyjnie. RA nie ma w samej sobie rekurencji, aczkolwiek tutaj jedynie mamy na myśli skończone złożenie jakiegoś działania algebry relacji konkretną ilość razy. Niech $C_n$ to będzie wynik dla naszego zapytania dla jakiegoś $n$. Oprócz tego zdefiniujmy $D_n = C_n \cup D_{n-1}$ dla $n \geq 1$, gdzie $D_0 = \emptyset$ - jest to zbiór wszystkich par $(u,v)$ które wystąpiły już wcześniej. Możemy więc zdefiniować:
+
+$$
+C_1 = E
+$$
+
+$$
+C_{n + 1} = \pi_{1,4}(\sigma_{2,3}(E \times C_n)) - D_{n}  \text{ dla } n \geq 1
+$$
+
+Odpowiedzią jest zatem $C_4$ - to jest wyrażenie algebry relacji, rekurencja jest tylko wykorzystywana do obliczenia zapytania, lecz nie jest w samym zapytaniu.
+
 ### Egzamin 2022/2023 Zad.1
 
 #### Treść zadania
